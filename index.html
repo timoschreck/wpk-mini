@@ -1,103 +1,298 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vertriebspartnerschaft – Homeplus</title>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-<style>
-:root {
-    --color-base: #FFFFFF;
-    --color-text: #464646;
-    --color-accent1: #A0E628;
-    --color-accent2: #321EE6;
-    --font-primary: 'Montserrat', sans-serif;
-}
-body {
-    margin: 0;
-    font-family: var(--font-primary);
-    background: var(--color-base);
-    color: var(--color-text);
-    line-height: 1.6;
-    padding: 0;
-}
-header {
-    background: var(--color-base);
-    text-align: center;
-    padding: 40px 20px;
-    border-bottom: 4px solid var(--color-accent1);
-}
-header img {
-    max-width: 150px;
-    height: auto;
-}
-header h1 {
-    margin: 20px 0 10px;
-    font-size: 2em;
-    font-weight: 600;
-}
-header p {
-    margin: 0;
-    font-size: 1.2em;
-}
-section {
-    padding: 40px 20px;
-    max-width: 800px;
-    margin: 0 auto;
-}
-section h2 {
-    font-size: 1.8em;
-    margin-bottom: 10px;
-    color: var(--color-accent2);
-}
-section p {
-    margin-bottom: 20px;
-}
-.cta {
-    text-align: center;
-    margin: 40px 0;
-}
-.cta a {
-    display: inline-block;
-    padding: 15px 30px;
-    background-color: var(--color-accent2);
-    color: var(--color-base);
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: 600;
-}
-footer {
-    background: var(--color-base);
-    border-top: 4px solid var(--color-accent1);
-    text-align: center;
-    padding: 20px;
-    font-size: 0.9em;
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vertriebsformular – Homeplus</title>
+  <!-- Import Montserrat font to match the original design -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* Define color palette and base fonts similar to the Homeplus Vertriebsformular */
+    :root {
+      --color-base: #FFFFFF;
+      --color-text: #464646;
+      --color-accent1: #A0E628;
+      --color-accent2: #321EE6;
+      --font-primary: 'Montserrat', sans-serif;
+    }
+    body {
+      margin: 0;
+      font-family: var(--font-primary);
+      background: var(--color-base);
+      color: var(--color-text);
+      line-height: 1.6;
+    }
+    header {
+      text-align: center;
+      padding: 40px 20px;
+      border-bottom: 4px solid var(--color-accent1);
+    }
+    header img {
+      max-width: 150px;
+      height: auto;
+    }
+    header h1 {
+      margin-top: 20px;
+      font-size: 2em;
+      font-weight: 600;
+    }
+    header p {
+      margin: 0;
+      font-size: 1.2em;
+    }
+    .photo-banner img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin: 20px 0;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    section h2 {
+      font-size: 1.8em;
+      margin-bottom: 10px;
+      color: var(--color-accent2);
+    }
+    section p {
+      margin-bottom: 20px;
+    }
+    /* Styling for the form container */
+    .form-section {
+      background: var(--color-base);
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: 600;
+    }
+    .form-group input[type="text"],
+    .form-group input[type="tel"],
+    .form-group input[type="email"],
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1em;
+    }
+    .form-group textarea {
+      min-height: 100px;
+    }
+    .form-inline {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .form-inline .form-group {
+      flex: 1;
+      margin-bottom: 0;
+    }
+    .radio-group {
+      display: flex;
+      gap: 20px;
+    }
+    .radio-group label {
+      margin-left: 5px;
+      font-weight: normal;
+    }
+    button[type="submit"] {
+      background: var(--color-accent2);
+      color: var(--color-base);
+      padding: 15px 30px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1em;
+      cursor: pointer;
+    }
+    button[type="submit"]:hover {
+      background: #291bcf;
+    }
+    .success-message {
+      text-align: center;
+      color: var(--color-accent2);
+      font-size: 1.2em;
+      font-weight: 600;
+      padding: 20px;
+      display: none;
+    }
+    /* Responsive tweaks */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.6em;
+      }
+      section {
+        padding: 20px;
+      }
+    }
+  </style>
 </head>
-<img src="jvpw.png" alt="Starte deine Zukunft im Bereich Photovoltaik & Wärmepumpen!" style="max-width:150px; height:auto;">
-<header>
-<<img src="jvpw.png" alt="Starte deine Zukunft im Bereich Photovoltaik & Wärmepumpen!" style="max-width:150px; height:auto;">height:auto;">>
-<h1>Deine Karriere in einer nachhaltigen Branche</h1>
-<p>Vertriebspartnerschaft für Photovoltaik & Wärmepumpen</p>
-</header>
-    <div class="photo-banner">
-  <img src="jvpw.png" alt="Starte deine Zukunft im Bereich Photovoltaik & Wärmepumpen!" style="width:100%;height:auto;border-radius:8px;margin:20px 0;">
-
-        
-</div>
-
-<section>
-<h2>Starte deine Zukunft mit Homeplus</h2>
-<p>Du suchst eine berufliche Perspektive mit Substanz und Zukunft? Bei Homeplus bist du genau richtig. Wir bieten engagierten Menschen die Möglichkeit, als Vertriebsprofi im Bereich Photovoltaik und Wärmepumpen durchzustarten – nebenberuflich oder hauptberuflich.</p>
-<p>Homeplus steht für höchste Qualität, Zuverlässigkeit und Zielorientierung. Mit unserer strukturierten Einarbeitung, hochwertigen Produkten und langfristigen Ausrichtung legst du den Grundstein für deinen Erfolg in der Energiebranche.</p>
-<p>Vorkenntnisse sind nicht zwingend erforderlich. Entscheidend sind Motivation, Verlässlichkeit und Interesse an nachhaltiger Technologie. Nutze die Chance, Teil eines wachsenden Marktes zu werden und dir deine Selbstständigkeit aufzubauen.</p>
-</section>
-<div class="cta">
-<a href="mailto:t.schreck@homepelus.de@?subject=Vertriebspartnerschaft%20Information&body=Ich%20interessiere%20mich%20f%C3%BCr%20die%20Vertriebspartnerschaft%20bei%20Homeplus.%20Bitte%20senden%20Sie%20mir%20weitere%20Informationen.">Unverbindlich informieren</a>
-</div>
-<footer>
-<p>&copy; 2026 Homeplus. Alle Rechte vorbehalten.</p>
-</footer>
+<body>
+  <!-- Header with logo and tagline -->
+  <header>
+    <img src="jvpw.png" alt="Starte deine Zukunft im Bereich Photovoltaik &amp; Wärmepumpen!">
+    <h1>Deine Karriere in einer nachhaltigen Branche</h1>
+    <p>Vertriebspartnerschaft für Photovoltaik &amp; Wärmepumpen</p>
+  </header>
+  <!-- Hero image banner -->
+  <div class="photo-banner">
+    <img src="jvpw.png" alt="Starte deine Zukunft im Bereich Photovoltaik &amp; Wärmepumpen!">
+  </div>
+  <!-- Introductory section -->
+  <section>
+    <h2>Starte deine Zukunft mit Homeplus</h2>
+    <p>Du suchst eine berufliche Perspektive mit Substanz und Zukunft? Bei Homeplus bist du genau richtig. Wir bieten engagierten Menschen die Möglichkeit, als Vertriebsprofi im Bereich Photovoltaik und Wärmepumpen durchzustarten – nebenberuflich oder hauptberuflich.</p>
+    <p>Homeplus steht für höchste Qualität, Zuverlässigkeit und Zielorientierung. Mit unserer strukturierten Einarbeitung, hochwertigen Produkten und langfristigen Ausrichtung legst du den Grundstein für deinen Erfolg in der Energiebranche.</p>
+    <p>Vorkenntnisse sind nicht zwingend erforderlich. Entscheidend sind Motivation, Verlässlichkeit und Interesse an nachhaltiger Technologie. Nutze die Chance, Teil eines wachsenden Marktes zu werden und dir deine Selbstständigkeit aufzubauen.</p>
+  </section>
+  <!-- Form section replicating the Homeplus Vertriebsfragebogen -->
+  <section class="form-section">
+    <h2>Jetzt bewerben</h2>
+    <form id="vertrieb-form">
+      <!-- Experience question -->
+      <div class="form-group">
+        <label>Hast du bereits Erfahrungen im Vertriebsbereich? <span style="color:red;">*</span></label>
+        <div class="radio-group">
+          <label><input type="radio" name="erfahrung" value="Ja" required> Ja</label>
+          <label><input type="radio" name="erfahrung" value="Nein" required> Nein</label>
+        </div>
+      </div>
+      <!-- Conditional experience years -->
+      <div class="form-group" id="experience-years" style="display:none;">
+        <label>Über wie viele Jahre Erfahrung verfügst du?</label>
+        <select name="jahre">
+          <option value="">Bitte wählen</option>
+          <option value="1 Jahr">1&nbsp;Jahr</option>
+          <option value="1-3 Jahre">1–3&nbsp;Jahre</option>
+          <option value="Mehr als 3 Jahre">Mehr als 3&nbsp;Jahre</option>
+        </select>
+      </div>
+      <!-- D2D question -->
+      <div class="form-group">
+        <label>Bist du bereit D2D zu machen? <span style="color:red;">*</span></label>
+        <select name="d2d" required>
+          <option value="">— Auswahl treffen —</option>
+          <option value="Ja">Ja</option>
+          <option value="Nein">Nein</option>
+        </select>
+      </div>
+      <!-- Motivation question -->
+      <div class="form-group">
+        <label>Warum orientierst du dich gerade neu?</label>
+        <textarea name="warum"></textarea>
+      </div>
+      <!-- Name fields -->
+      <div class="form-group form-inline">
+        <div class="form-group">
+          <label>Vorname <span style="color:red;">*</span></label>
+          <input type="text" name="vorname" required>
+        </div>
+        <div class="form-group">
+          <label>Nachname <span style="color:red;">*</span></label>
+          <input type="text" name="nachname" required>
+        </div>
+      </div>
+      <!-- Address fields -->
+      <div class="form-group">
+        <label>Adresse <span style="color:red;">*</span></label>
+        <input type="text" name="adresse" placeholder="Adresse" required>
+      </div>
+      <div class="form-group form-inline">
+        <div class="form-group">
+          <label>Ort <span style="color:red;">*</span></label>
+          <input type="text" name="ort" required>
+        </div>
+        <div class="form-group">
+          <label>Bundesland <span style="color:red;">*</span></label>
+          <input type="text" name="bundesland" required>
+        </div>
+        <div class="form-group">
+          <label>PLZ <span style="color:red;">*</span></label>
+          <input type="text" name="plz" required>
+        </div>
+      </div>
+      <!-- Phone number -->
+      <div class="form-group">
+        <label>Telefonnummer <span style="color:red;">*</span></label>
+        <input type="tel" name="telefon" required>
+      </div>
+      <!-- Email address -->
+      <div class="form-group">
+        <label>E-Mail-Adresse <span style="color:red;">*</span></label>
+        <input type="email" name="email" required>
+      </div>
+      <!-- Preferred contact time -->
+      <div class="form-group">
+        <label>Um welche Uhrzeit dürfen wir dich kontaktieren?</label>
+        <select name="kontaktzeit">
+          <option value="9 Uhr – 12 Uhr">9&nbsp;Uhr&nbsp;–&nbsp;12&nbsp;Uhr</option>
+          <option value="12 Uhr – 15 Uhr">12&nbsp;Uhr&nbsp;–&nbsp;15&nbsp;Uhr</option>
+          <option value="15 Uhr – 18 Uhr">15&nbsp;Uhr&nbsp;–&nbsp;18&nbsp;Uhr</option>
+          <option value="18 Uhr – 21 Uhr">18&nbsp;Uhr&nbsp;–&nbsp;21&nbsp;Uhr</option>
+          <option value="Ganztägig">Ganztägig</option>
+        </select>
+      </div>
+      <button type="submit">Absenden</button>
+    </form>
+    <!-- Success message displayed after submission -->
+    <div id="success" class="success-message">Vielen Dank! Wir haben Deine Nachricht erhalten und werden uns umgehend bei Dir melden.</div>
+  </section>
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 Homeplus. Alle Rechte vorbehalten.</p>
+  </footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // toggle the experience-years select based on radio choice
+      var erfRadios = document.querySelectorAll('input[name="erfahrung"]');
+      var yearsDiv = document.getElementById('experience-years');
+      erfRadios.forEach(function(radio) {
+        radio.addEventListener('change', function() {
+          if (this.value === 'Ja') {
+            yearsDiv.style.display = 'block';
+          } else {
+            yearsDiv.style.display = 'none';
+          }
+        });
+      });
+      // handle form submission via fetch to avoid mail client
+      var form = document.getElementById('vertrieb-form');
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        var formData = new FormData(form);
+        // Add metadata expected by formsubmit.co
+        formData.append('_subject', 'Neue Vertriebsanfrage');
+        formData.append('_captcha', 'false');
+        // Replace YOUR_EMAIL with the target email address of the site owner
+        fetch('https://formsubmit.co/t.schreck@homeplus.de', {
+          method: 'POST',
+          body: formData,
+          headers: { 'Accept': 'application/json' }
+        })
+          .then(function(response) {
+            if (response.ok) {
+              // hide form and show success message
+              form.style.display = 'none';
+              document.getElementById('success').style.display = 'block';
+            } else {
+              alert('Es ist ein Fehler aufgetreten. Bitte versuche es später erneut.');
+            }
+          })
+          .catch(function() {
+            alert('Es ist ein Fehler aufgetreten. Bitte versuche es später erneut.');
+          });
+      });
+    });
+  </script>
 </body>
 </html>
